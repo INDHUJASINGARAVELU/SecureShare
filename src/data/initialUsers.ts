@@ -1,0 +1,48 @@
+import { User } from '../types/auth';
+
+export const INITIAL_USERS: User[] = [
+  {
+    id: 'usr-owner-001',
+    name: 'Indhuja S.',
+    email: 'indhuja.s@secureshare.smvec.ac.in',
+    role: 'data_owner',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: true,
+    department: 'AI & Data Science (SMVEC)',
+    status: 'active',
+    lastActive: new Date().toISOString(),
+  },
+  {
+    id: 'usr-admin-002',
+    name: 'Vikram Malhotra',
+    email: 'admin.vikram@secureshare.cloud',
+    role: 'security_admin',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: true,
+    department: 'Cloud Security Operations',
+    status: 'active',
+    lastActive: new Date(Date.now() - 3600000).toISOString(),
+  },
+  {
+    id: 'usr-auditor-003',
+    name: 'Ananya Sharma',
+    email: 'auditor.ananya@secureshare.compliance',
+    role: 'security_auditor',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: false,
+    department: 'Independent Compliance Audit',
+    status: 'active',
+    lastActive: new Date(Date.now() - 7200000).toISOString(),
+  },
+  {
+    id: 'usr-recipient-004',
+    name: 'External Recipient',
+    email: 'partner.review@external-consulting.com',
+    role: 'external_recipient',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: false,
+    department: 'External Partner Organization',
+    status: 'active',
+    lastActive: new Date(Date.now() - 14400000).toISOString(),
+  },
+];
